@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRTX - Login</title>
+    <meta name="description" content="Faça login na GameVault para acessar suas contas premium de jogos">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="landing.html" class="logo">VRTX STORY</a>
+            </div>
+            <div class="nav-menu">
+                <a href="landing.html" class="nav-link">Voltar ao Início</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="login-background">
+            <div class="neon-grid"></div>
+        </div>
+        
+        <div class="container">
+            <div class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <h1 class="login-title">Bem-vindo de <span class="neon-text">volta</span></h1>
+                        <p class="login-subtitle">Acesse sua conta VRTX STORY</p>
+                    </div>
+
+                    <form class="login-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="Email"
+                                required
+                            >
+                            <span class="form-error" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="form-label">Senha</label>
+                            <div class="password-input-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    class="form-input" 
+                                    placeholder="Senha"
+                                    required
+                                >
+                                <button type="button" class="password-toggle" id="passwordToggle">
+                                    👁️
+                                </button>
+                            </div>
+                            <span class="form-error" id="passwordError"></span>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" id="rememberMe" name="rememberMe">
+                                <span class="checkmark"></span>
+                                Lembrar de mim
+                            </label>
+                            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-login">
+                            <span class="btn-text">Entrar</span>
+                            <span class="btn-loader" style="display: none;">Entrando...</span>
+                        </button>
+                    </form>
+
+                    <div class="login-divider">
+                        <span>ou</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button class="btn btn-social btn-google" id="googleLogin">
+                            <span class="social-icon">🔍</span>
+                            Continuar com Google
+                        </button>
+                        <button class="btn btn-social btn-discord" id="discordLogin">
+                            <span class="social-icon">🎮</span>
+                            Continuar com Discord
+                        </button>
+                    </div>
+
+                    <div class="login-footer">
+                        <p>Não tem uma conta? <a href="#" class="register-link">Cadastre-se</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span class="toast-icon">✅</span>
+            <span class="toast-message">Login realizado com sucesso!</span>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

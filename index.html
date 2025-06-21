@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex - Story</title>
+    <meta name="description" content="Compre contas premium de jogos com segurança. Preços baixos, entrega imediata e garantia total.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="#home" class="logo">VRTX <span>STORY</span></a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#benefits" class="nav-link">Vantagens</a>
+                <a href="#accounts" class="nav-link">Contas</a>
+                <a href="#testimonials" class="nav-link">Depoimentos</a>
+                <a href="#contacts" class="nav-link">Contato</a>
+                <a href="login/login.html" target="_blank" class="login">Login</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="neon-grid"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    VRTX<span class="neon-text">STORY</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Acesse os melhores jogos com contas verificadas e seguras. 
+                    Entrega imediata e preços imbatíveis.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary pulse-btn" onclick="scrollToSection('accounts')">
+                        Ver Contas Disponíveis
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('benefits')">
+                        Saiba Mais
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Clientes Satisfeitos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24h</span>
+                        <span class="stat-label">Suporte</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Seguro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Por que escolher a <span class="neon-text">VRTX STORY</span>?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>100% Seguro</h3>
+                    <p>Todas as contas são verificadas e garantimos total segurança na compra.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Entrega Imediata</h3>
+                    <p>Receba suas credenciais em segundos após a confirmação do pagamento.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎧</div>
+                    <h3>Suporte 24H</h3>
+                    <p>Nossa equipe está sempre disponível para ajudar você.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⭐</div>
+                    <h3>Qualidade Premium</h3>
+                    <p>Contas com alto nível, skins raras e conteúdo exclusivo.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Comunidade Ativa</h3>
+                    <p>Junte-se a milhares de gamers satisfeitos com nossos serviços.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎮</div>
+                    <h3>Múltiplos Jogos</h3>
+                    <p>Contas para todos os jogos mais populares do momento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accounts Section -->
+    <section class="accounts" id="accounts">
+        <div class="container">
+            <h2 class="section-title">Contas <span class="neon-text">Disponíveis</span></h2>
+            <div class="accounts-grid" id="accountsGrid">
+                <!-- Accounts will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">O que nossos <span class="neon-text">clientes</span> dizem</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <p>"Comprei uma conta de Valorant e foi incrível! Entrega super rápida e a conta veio exatamente como prometido."</p>
+                        <div class="testimonial-author">
+                            <strong>João Silva</strong>
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Melhor site para comprar contas! Suporte excelente e preços justos. Já comprei várias contas aqui."</p>
+                        <div class="testimonial-author">
+                            <strong>Maria Santos</strong>
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Recomendo para todos! Processo super simples e seguro. A conta que comprei tinha skins incríveis!"</p>
+                        <div class="testimonial-author">
+                            <strong>Pedro Costa</strong>
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Pronto para começar a <span class="neon-text">jogar</span>?</h2>
+            <p>Não perca mais tempo. Adquira sua conta premium agora mesmo!</p>
+            <button class="btn btn-primary btn-large pulse-btn" onclick="scrollToSection('accounts')">
+                Comprar Agora
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VRTX STORY</h3>
+                    <p>A melhor plataforma para comprar contas premium de jogos com segurança e qualidade.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#benefits">Vantagens</a></li>
+                        <li><a href="#accounts">Contas</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links" id="contacts">
+                        <a href="https://discord.gg/d23NNmBp" target="_blank" class="social-link">Discord</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">TikTok</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VRTX STORY. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="landing.js"></script>
+</body>
+</html>
