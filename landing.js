@@ -120,9 +120,8 @@ function renderAccounts() {
 function buyAccount(accountId) {
     const account = gameAccounts.find(acc => acc.id === accountId);
     if (account) {
-        alert(`Redirecionando para compra da conta: ${account.title}\nPreço: ${account.currentPrice}`);
-        // Here you would typically redirect to a payment page or open a modal
-        console.log('Buying account:', account);
+        addToCart(account.title + " - " + account.currentPrice);
+        openCart(); // Abre o carrinho automaticamente
     }
 }
 
@@ -283,3 +282,57 @@ document.addEventListener('DOMContentLoaded', createParticles);
 
 // Console welcome message
 console.log('%c🎮 GameVault - Landing Page Loaded Successfully! 🎮', 'color: #8b5cf6; font-size: 16px; font-weight: bold;');
+
+const carrinhoLink = document.querySelector('.carrinho');
+const cartSidebar = document.getElementById('cartSidebar');
+const cartItems = document.getElementById('cartItems');
+
+carrinhoLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleCart();
+});
+
+function toggleCart() {
+    cartSidebar.classList.toggle('active');
+}
+
+// Exemplo: adicionar item ao carrinho
+function addToCart(nome = 'Conta Premium') {
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'cart-item';
+    itemDiv.innerHTML = `
+        <span>${nome}</span>
+        <button onclick="this.parentElement.remove()">Remover</button>
+    `;
+    cartItems.appendChild(itemDiv);
+
+}
+
+function openCart() {
+    if (!cartSidebar.classList.contains('active')) {
+        cartSidebar.classList.add('active');
+    }
+}
+
+function finalizarCompra() {
+    if (cartItems.children.length === 0) {
+        alert('Seu carrinho está vazio!');
+        return;
+    }
+
+    // Aqui você pode implementar o que quiser: redirecionar para um checkout, exibir um resumo, etc.
+    // Por enquanto, vamos só mostrar um alerta e limpar o carrinho:
+
+    let itensNoCarrinho = [];
+    for (const item of cartItems.children) {
+        itensNoCarrinho.push(item.querySelector('span').textContent);
+    }
+
+    alert('Compra finalizada com sucesso!\nItens comprados:\n' + itensNoCarrinho.join('\n'));
+
+    // Limpa o carrinho
+    cartItems.innerHTML = '';
+
+    // Fecha o carrinho
+    toggleCart();
+}

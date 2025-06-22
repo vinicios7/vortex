@@ -20,11 +20,7 @@
                 <a href="#home" class="logo">VRTX <span>STORY</span></a>
             </div>
             <div class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link">Início</a>
-                <a href="#benefits" class="nav-link">Vantagens</a>
-                <a href="#accounts" class="nav-link">Contas</a>
-                <a href="#testimonials" class="nav-link">Depoimentos</a>
-                <a href="#contacts" class="nav-link">Contato</a>
+                <a href="#home" class="nav-link carrinho"><img src="img/carrinho-de-compras (1).png" alt="carrinho de compras">Carrinho</a>
                 <a href="login/login.html" target="_blank" class="login">Login</a>
             </div>
             <button class="nav-toggle" id="navToggle">
@@ -33,7 +29,23 @@
                 <span></span>
             </button>
         </nav>
-    </header>
+    </header>            
+    <!-- Aba do Carrinho -->
+            <div id="cartSidebar">
+            <div class="cart-header">
+                <h3>Carrinho</h3>
+                <span class="close-cart" onclick="toggleCart()">×</span>
+            </div>
+            <div id="cartItems" class="cart-items"></div>
+                <button id="finalizarCompraBtn" class="btn btn-primary btn-large" onclick="finalizarCompra()">Finalizar Compra</button>
+            </div>
+    <!-- Botão Lateral-->
+     <div class="btn-lateral">
+        <a href="https://discord.gg/hncC6YuJXu" target="_blank">
+            <img  src="img/discordia.png" alt="discord">
+        </a>
+     </div>
+    <!-- Botão Lateral-->
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -124,58 +136,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2 class="section-title">O que nossos <span class="neon-text">clientes</span> dizem</h2>
-            <div class="testimonials-slider">
-                <div class="testimonial active">
-                    <div class="testimonial-content">
-                        <p>"Comprei uma conta de Valorant e foi incrível! Entrega super rápida e a conta veio exatamente como prometido."</p>
-                        <div class="testimonial-author">
-                            <strong>João Silva</strong>
-                            <span>⭐⭐⭐⭐⭐</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"Melhor site para comprar contas! Suporte excelente e preços justos. Já comprei várias contas aqui."</p>
-                        <div class="testimonial-author">
-                            <strong>Maria Santos</strong>
-                            <span>⭐⭐⭐⭐⭐</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"Recomendo para todos! Processo super simples e seguro. A conta que comprei tinha skins incríveis!"</p>
-                        <div class="testimonial-author">
-                            <strong>Pedro Costa</strong>
-                            <span>⭐⭐⭐⭐⭐</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-dots">
-                <span class="dot active" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Pronto para começar a <span class="neon-text">jogar</span>?</h2>
-            <p>Não perca mais tempo. Adquira sua conta premium agora mesmo!</p>
-            <button class="btn btn-primary btn-large pulse-btn" onclick="scrollToSection('accounts')">
-                Comprar Agora
-            </button>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -190,7 +150,6 @@
                         <li><a href="#home">Início</a></li>
                         <li><a href="#benefits">Vantagens</a></li>
                         <li><a href="#accounts">Contas</a></li>
-                        <li><a href="#testimonials">Depoimentos</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -205,7 +164,7 @@
                 <div class="footer-section">
                     <h4>Redes Sociais</h4>
                     <div class="social-links" id="contacts">
-                        <a href="https://discord.gg/d23NNmBp" target="_blank" class="social-link">Discord</a>
+                        <a href="https://discord.gg/hncC6YuJXu" target="_blank" class="social-link">Discord</a>
                         <a href="#" class="social-link">Instagram</a>
                         <a href="#" class="social-link">TikTok</a>
                         <a href="#" class="social-link">YouTube</a>
@@ -213,11 +172,11 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 VRTX STORY. Todos os direitos reservados.</p>
+                <p>&copy; 2025 VRTX STORY. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <script src="landing.js"></script>
+    <script src="landing.js" defer></script>
 </body>
 </html>
